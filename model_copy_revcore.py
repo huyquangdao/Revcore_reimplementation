@@ -172,7 +172,7 @@ class CrossModel(nn.Module):
 
         #self.concept_GCN4gen=GCNConv(self.dim, opt['embedding_size'])
 
-        w2i=json.load(open('word2index_redial2.json',encoding='utf-8'))
+        w2i=json.load(open('word2index_redial.json',encoding='utf-8'))
         self.i2w={w2i[word]:word for word in w2i}
 
         self.mask4key=torch.Tensor(np.load('mask4key20rev.npy')).cuda()
