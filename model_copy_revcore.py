@@ -175,8 +175,8 @@ class CrossModel(nn.Module):
         w2i=json.load(open('word2index_redial.json',encoding='utf-8'))
         self.i2w={w2i[word]:word for word in w2i}
 
-        self.mask4key=torch.Tensor(np.load('mask4key20rev.npy')).cuda()
-        self.mask4movie=torch.Tensor(np.load('mask4movie20rev.npy')).cuda()
+        self.mask4key=torch.Tensor(np.load('mask4key.npy')).cuda()
+        self.mask4movie=torch.Tensor(np.load('mask4movie.npy')).cuda()
         self.mask4=self.mask4key+self.mask4movie
         if is_finetune:
             params = [self.dbpedia_RGCN.parameters(), self.concept_GCN.parameters(),
