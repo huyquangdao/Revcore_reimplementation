@@ -27,8 +27,8 @@ import signal
 import json
 import argparse
 import pickle as pkl
-from dataset_review20 import dataset,CRSdataset
-from model_copy_helpful import CrossModel
+from dataset_copy_revcore import dataset,CRSdataset
+from model_copy_revcore import CrossModel
 import torch.nn as nn
 from torch import optim
 import torch
