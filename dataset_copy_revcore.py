@@ -264,9 +264,7 @@ class dataset(object):
             context, c_lengths, concept_mask, dbpedia_mask, reviews_mask,  _ = self.padding_context(
                 line["contexts"]
             )
-            response, r_length, _, _ = self.padding_w2v(
-                line["response"], self.max_r_length
-            )
+            response,r_length,_,_,_=self.padding_w2v(line['response'],self.max_r_length)
             if False:
                 mask_response, mask_r_length, _, _ = self.padding_w2v(
                     self.response_delibration(line["response"]), self.max_r_length
